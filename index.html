@@ -6,8 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Md. Ali Akber</title>
-		
+		<title>Md. Ali Akber</title>		
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,8 +19,8 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h3>Hey,I'm</h3>
-						<h2>Md. Ali Akber<br /></h2>
+						<h2>𝓗𝓮𝔂 𝓘'𝓶</h2>
+						<h1>𝓜𝓭. 𝓐𝓵𝓲 𝓐𝓴𝓫𝓮𝓻<br /></h1>
 						
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -36,9 +35,9 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
+							<li class="active"><a href="index.html">Projects</a></li>
+							<li><a href="generic.html">Education</a></li>
+							<li><a href="elements.html">Publications</a></li>
 						</ul>
 						<ul class="icons">
 							
@@ -56,9 +55,7 @@
 								<header class="major">
 									
 									<h3><a href="#">CSE Graduate<br /></a></h3>
-									<p> Successfully developed six academic projects through collaboration with project teams
-									<br>Strengthened emotional quotient, and mostly find ways to overcome challenges to finish specific tasks
-									<br>Take proactive steps toward fulfilling my responsibilities and duties
+									<p> Successfully developed six academic projects through collaboration with project teams.||Strengthened emotional quotient, and mostly find ways to overcome challenges to finish specific tasks.||Take proactive steps toward fulfilling my responsibilities and duties
 										</p>
 								</header>
 								<a href="#" class="image main"><img src="images/pic.jpg" alt="" /></a>
@@ -74,7 +71,13 @@
 										
 										<h2><a href="#">Project 1<br /></a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/pic1.png" alt="" /></a>
+									
+							
+										<a href="#" class="image fit"><img id="image1" src="images/pic1.png" alt="" /></a>
+										<a href="#" class="image fit"><img id="image2" src="images/pic2.jpg" alt="" /></a>
+									
+
+
 									<p> Natural Language Processing (Thesis Part -I) || Personality detection based on contextual feature embedding in social media posts. || Python programming is used for implementation.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/AliAkber123/MBTI_prediction_using_ML" class="button">View More</a></li>
@@ -82,14 +85,14 @@
 								</article>
 								<article>
 									<header>
-										
 										<h2><a href="#">Project 2<br /></a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/pic2.png" alt="" /></a>
-									<p> Android Application || IDE: Android Studio || SDLC and STLC for organized development and rigorous testing || Database: Realtime-database 
-										</p>
+									<a href="#" class="image fit"><img id="image3" src="images/pic3.png" alt="" /></a>
+									<a href="#" class="image fit"><img id="image4" src="images/pic4.png" alt="" /></a>
+									<p>Android Application || IDE: Android Studio || SDLC and STLC for organized development and rigorous testing || Database: Realtime-database</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/AliAkber123/EPharma" class="button">View More</a></li>
+										
 									</ul>
 								</article>
 								<article>
@@ -204,6 +207,49 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+
+			<script>
+				
+				const image1 = document.getElementById('image1');
+				
+				const image2 = document.getElementById('image2');
+				const images = [image1, image2];
+				let currentIndex = 0;
+			
+				function showNextImage() {
+				  images.forEach(img => {
+					img.style.display = 'none';
+				  });
+			
+				  images[currentIndex].style.display = 'block';
+				  currentIndex = (currentIndex + 1) % images.length;
+			
+				  setTimeout(showNextImage, 4000); // Change image every 4 seconds (4000 milliseconds)
+				}
+			
+				showNextImage(); // Start displaying images
+			  </script>
+
+			  <script>
+				
+				const image3 = document.getElementById('image3');
+				const image4 = document.getElementById('image4');
+		        const image34 = [image3, image4];
+		        let imageIndex = 0;
+				function swapImages() {
+					image34.forEach(img =>{
+						img.style.display = "none";
+					});
+					image34[imageIndex].style.display = "block";
+					imageIndex = (imageIndex+1)%image34.length;
+					setTimeout(swapImages,4000);					
+				}
+				swapImages();
+			</script>
+
+
 
 	</body>
 </html>
