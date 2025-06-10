@@ -10,6 +10,8 @@
 			text-align: center;
 		}
 	</style>
+	
+	
 	<style>
 		.center-heading {
 			text-align: center;
@@ -21,6 +23,19 @@
 			padding: 10px;
 			transition: background-color 0.6s ease-in;
 		}
+		html {
+  scroll-behavior: smooth;
+}
+
+#teaching {
+  scroll-margin-top: 60px; /* Adjust based on your navbar height */
+}
+
+#publications {
+  scroll-margin-top: 60px; /* Adjust based on your navbar height */
+}
+
+
 	</style>
 
 	<style>
@@ -43,7 +58,7 @@
 
 		}
 
-		}
+		
 	</style>
 	<title>Md. Ali Akber</title>
 	<meta charset="utf-8" />
@@ -79,11 +94,13 @@
 
 		<!-- Nav -->
 		<nav id="nav">
-			<ul class="links">
-				<li class="active"><a href="index.html">Md. Ali Akber</a></li>
-				<!-- <li><a href="generic.html">Education</a></li>
-				<li><a href="elements.html">Publications</a></li> -->
-			</ul>
+			<ul class="links"> 
+    <li class="active"><a href="index.html">Md. Ali Akber</a></li>
+    <li><a href="#teaching" onclick="scrollToSection(event, 'teaching')">Teaching</a></li>
+<li><a href="#publications" onclick="scrollToSection(event, 'publications')">Publications</a></li>
+    <!-- <li><a href="#publications">Publications</a></li> -->
+</ul>
+
 			<ul class="icons">
 				<li>
 					<a href="https://scholar.google.com/citations?user=IKEOFe4AAAAJ&hl=en&authuser=1" target="_blank"
@@ -155,9 +172,10 @@
 
 
 
-					<article>
-						<h3 class="center-heading" style="margin-top: 80px;" >Teaching</h3>
-					</article>
+					<article id="teaching">
+    <h3 class="center-heading" style="margin-top: 80px;">Teaching</h3>
+</article>
+
 
 					<div class="publication">
 
@@ -386,7 +404,7 @@
 
 
 
-					<article>
+					<article >
 						<h3 class="center-heading" style="margin-top: 80px;">Educational Qualifications</h3>
 					</article>
 
@@ -458,7 +476,7 @@
 					</div>
 
 
-					<article>
+					<article id="publications">
 						<h3 class="center-heading" style="margin-top: 80px;">Publications</h3>
 					</article>
 					<!-- <div class="image main"><img src="images/self.jpg" alt="" /></div>     -->
@@ -973,6 +991,7 @@
 		}
 		swapImages78();
 	</script>
+
 
 
 
